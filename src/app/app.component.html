@@ -1,1 +1,2 @@
-<app-home></app-home>
+<h2>Total No. Of Employees -  {{empList.length}}</h2>
+<app-home [employees] = "empList" (onReset)="resetEmployees($event)"></app-home>

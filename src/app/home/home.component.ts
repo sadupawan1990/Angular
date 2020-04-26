@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -37,36 +37,9 @@ export class HomeComponent implements OnInit {
     'font-style':'italic'
   }
 
-employees : any[] = [
-  {
-    Id: 1,
-    Name : 'John',
-    Age : 30,
-    Sal : 50000,
-    Deptartment : 'IT' 
-  },
-  {
-    Id: 2,
-    Name : 'Mike',
-    Age : 35,
-    Sal : 30000,
-    Deptartment : 'Admin' 
-  },
-  {
-    Id: 3,
-    Name : 'Gates',
-    Age : 30,
-    Sal : 70000,
-    Deptartment : 'IT' 
-  },
-  {
-    Id: 4,
-    Name : 'Robert',
-    Age : 30,
-    Sal : 40000,
-    Deptartment : 'HR' 
-  }
-];
+@Input() employees : any[];
+
+@Output() onReset : EventEmitter<any[]> = new EventEmitter<any[]>();
 
   constructor() { }
   
@@ -75,36 +48,7 @@ employees : any[] = [
   }
 
   Reset(){
-this.employees =  [
-  {
-    Id: 8,
-    Name : 'John',
-    Age : 30,
-    Sal : 50000,
-    Deptartment : 'IT' 
-  },
-  {
-    Id: 2,
-    Name : 'Mike',
-    Age : 35,
-    Sal : 30000,
-    Deptartment : 'Admin' 
-  },
-  {
-    Id: 3,
-    Name : 'Gates',
-    Age : 30,
-    Sal : 70000,
-    Deptartment : 'IT' 
-  },
-  {
-    Id: 4,
-    Name : 'Robert',
-    Age : 30,
-    Sal : 40000,
-    Deptartment : 'HR' 
-  }
-];
+    this.onReset.emit([]);
   }
 
   trackByEmpId(ind:number, empl :any){
