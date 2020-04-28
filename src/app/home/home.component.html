@@ -1,12 +1,17 @@
 <h1>Hello World! My First app {{title}} is running!</h1>
 
 <button class="reset" (click)="Reset()" >Reset Employees</button>
+<button class="primary" (click)="toggleFormat()" >Toggle Format</button>
 <div class="display-row">
   <div class="card"  *ngFor= "let emp of employees; let i=index; trackBy: trackByEmpId">
     <div class="card-body">Id: {{emp.Id}}</div>
-    <div class="card-body">Name: {{emp.Name}}</div>
+    <div class="card-body">Name: {{emp.Name | lowercase | uppercase}}</div>
     <div class="card-body">Age: {{emp.Age}}</div>
-    <div class="card-body">Sal: {{emp.Sal}}</div>
+    <div class="card-body">Sal: {{emp.Sal | currency : 'INR' : false : '1.3-4'}}</div>
     <div class="card-body">Department: {{emp.Department}}</div>
+    <div class="card-body">Joining Date: {{emp.JoiningDate | date : format}}</div>
   </div>
+</div>
+<div>
+  {{employees | json}}
 </div>

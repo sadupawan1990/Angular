@@ -41,6 +41,9 @@ export class HomeComponent implements OnInit {
 
 @Output() onReset : EventEmitter<any[]> = new EventEmitter<any[]>();
 
+
+
+  toggle = true;
   constructor() { }
   
   ngOnInit(): void {
@@ -54,5 +57,12 @@ export class HomeComponent implements OnInit {
   trackByEmpId(ind:number, empl :any){
     return empl.id; 
   }
+  toggleFormat(){
+    this.toggle = !this.toggle;
+  }
+
+  get format() {return this.toggle ? 'shortDate' : 'longDate'; }
+
+
 
 }

@@ -32,7 +32,7 @@ label{
     display: flex;
     flex-direction: column;
     min-width: 0; 
-    height: 170px;
+    height: auto;
     width: 250px;
     
     word-wrap: break-word;
@@ -79,4 +79,19 @@ label{
     cursor: pointer;
     border-radius: 4px;
     margin-bottom: 12px;
+    margin-left: 10px;
+}
+
+.primary{
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1rem;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    margin-left: 10px;
 }

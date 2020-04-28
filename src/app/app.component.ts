@@ -13,28 +13,32 @@ export class AppComponent {
       Name : 'John',
       Age : 30,
       Sal : 50000,
-      Deptartment : 'IT' 
+      Department : 'IT',
+      JoiningDate: '04/15/2016'
     },
     {
       Id: 2,
       Name : 'Mike',
       Age : 35,
       Sal : 30000,
-      Deptartment : 'Admin' 
+      Department : 'Admin',
+      JoiningDate: '02/21/2017'
     },
     {
       Id: 3,
       Name : 'Gates',
       Age : 30,
       Sal : 70000,
-      Deptartment : 'IT' 
+      Department : 'IT',
+      JoiningDate: '04/18/2015'
     },
     {
       Id: 4,
       Name : 'Robert',
       Age : 30,
       Sal : 40000,
-      Deptartment : 'HR' 
+      Department : 'HR',
+      JoiningDate: '03/15/2016'
     }
   ];
   
