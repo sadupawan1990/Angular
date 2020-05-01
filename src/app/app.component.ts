@@ -42,6 +42,8 @@ export class AppComponent {
     }
   ];
   
+  inputText : string;
+
   resetEmployees(eventData){
     this.empList = eventData;
   }

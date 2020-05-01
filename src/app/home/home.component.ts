@@ -44,6 +44,8 @@ export class HomeComponent implements OnInit {
 
 
   toggle = true;
+  num : number;
+  exponent : number;
   constructor() { }
   
   ngOnInit(): void {
